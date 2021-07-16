@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let food of food" button=true [routerLink]=food.path>
+  <ion-card-header class="ion-no-padding">
+    <ion-img [src]="food.image"></ion-img>
+    <ion-card-title class="ion-padding">{{food.name}}</ion-card-title>
+  </ion-card-header>
+</ion-card>
+</ion-content>

@@ -11,6 +11,13 @@ const routes: Routes = [
     path:'exercises',
     loadChildren:'./home/workouts/workouts.WorkoutsPageModule '
   },
+  {
+    path: 'recipe',
+    loadChildren:'./home/recipe/recipe/RecipePageModule'
+  },
+
+
+
 ];
 
 @NgModule({

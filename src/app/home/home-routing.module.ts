@@ -17,7 +17,7 @@ const routes: Routes = [
       },
       {
         path: 'recipes',
-        loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule)
+        loadChildren: () => import('./recipe/recipe.module').then( m => m.RecipePageModule)
       }
     ]
   },
@@ -29,7 +29,8 @@ const routes: Routes = [
   {
     path: 'arms',
     loadChildren: () => import('./arms/arms.module').then( m => m.ArmsPageModule)
-  },  {
+  },
+  {
     path: 'back',
     loadChildren: () => import('./back/back.module').then( m => m.BackPageModule)
   },
@@ -44,7 +45,23 @@ const routes: Routes = [
   {
     path: 'leg',
     loadChildren: () => import('./leg/leg.module').then( m => m.LegPageModule)
+  },
+  {
+    path: 'breakfast',
+    loadChildren: () => import('./breakfast/breakfast.module').then( m => m.BreakfastPageModule)
+  },
+  {
+    path: 'lunch',
+    loadChildren: () => import('./lunch/lunch.module').then( m => m.LunchPageModule)
+  },
+  {
+    path: 'dinner',
+    loadChildren: () => import('./dinner/dinner.module').then( m => m.DinnerPageModule)
   }
+
+
+
+
 
 
 
