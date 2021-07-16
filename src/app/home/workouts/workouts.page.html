@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Workout your Muscles
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card button = true *ngFor = "let work of muscle" [routerLink]="work.path">
+    <ion-card-header class="ion-no-padding">
+      <ion-img  [src]="work.image"></ion-img>
+      <ion-card-title class="ion-padding">{{work.name}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
