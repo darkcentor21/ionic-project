@@ -6,7 +6,30 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+    children:[
+      {
+        path: 'exercise',
+        loadChildren: () => import('./exercise/exercise.module').then( m => m.ExercisePageModule)
+      },
+      {
+        path: 'calorielog',
+        loadChildren: () => import('./calorielog/calorielog.module').then( m => m.CalorielogPageModule)
+      },
+      {
+        path: 'recipes',
+        loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule)
+      },
+      {
+        path:'',
+        redirectTo:'home/calorielog',
+        pathMatch:'full'
+      
+
+      }
+
+    ]
+  },
+ 
 ];
 
 @NgModule({
