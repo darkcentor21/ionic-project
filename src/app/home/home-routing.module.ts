@@ -57,7 +57,19 @@ const routes: Routes = [
   {
     path: 'dinner',
     loadChildren: () => import('./dinner/dinner.module').then( m => m.DinnerPageModule)
+  },  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'userprofile',
+    loadChildren: () => import('./userprofile/userprofile.module').then( m => m.UserprofilePageModule)
   }
+
 
 
 

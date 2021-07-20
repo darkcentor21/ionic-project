@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar placeholder="Search Recipe" inputmode="decimal" type="decimal" (ionChange)="onSearchChange($event)" [debounce]="250" showCancelButton="always"></ion-searchbar>
 <ion-card *ngFor="let food of food" button=true [routerLink]=food.path>
   <ion-card-header class="ion-no-padding">
     <ion-img [src]="food.image"></ion-img>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-back',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private http: HttpClient) { }
+  back: any=[]
   ngOnInit() {
+    this.http.get('https://wger.de/api/v2/')
+    .subscribe(data=>{
+      console.log(data)
+      this.back =data;
+    })
   }
 
 }

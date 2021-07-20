@@ -5,5 +5,9 @@
 </ion-header>
 
 <ion-content>
-
+<ion-list *ngFor=" let arms of arms">
+  <ion-item >
+    <ion-label>{{arms.result}}</ion-label>
+  </ion-item>
+</ion-list>
 </ion-content>
