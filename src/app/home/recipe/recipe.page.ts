@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-recipe',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe.page.scss'],
 })
 export class RecipePage implements OnInit {
+  http: any;
 
   constructor() { }
+  
   food : any[] = [
     {
       "name":"Breakfast",
@@ -25,7 +28,14 @@ export class RecipePage implements OnInit {
       "path":"/dinner"
     }
   ]
+  
+  recipe:any;
   ngOnInit() {
+    this.http.get('https://api.edamam.com/api/recipes/v2')
+    .subscribe(data=>{
+      console.log(data)
+      this.recipe =data;
+    })
   }
 
 }

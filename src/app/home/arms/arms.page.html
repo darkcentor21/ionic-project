@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>arms</ion-title>
+    <ion-title>Arm Workouts</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="workouts"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-list *ngFor=" let arms of arms">
-  <ion-item >
-    <ion-label>{{arms.result}}</ion-label>
+<ion-list  class="ion-no-padding" *ngFor=" let arm of arms">
+  <ion-item *ngIf="arm.category.name === 'Arms'&& arm.language.short_name === 'en'">
+    <ion-label >{{arm.name}}</ion-label>
   </ion-item>
 </ion-list>
 </ion-content>

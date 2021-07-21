@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>back</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="workouts"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-list>
-  <ion-item *ngFor="let back of back">
-    <ion-label>{{back.exercisecategory}}</ion-label>
+<ion-list class="ion-no-padding" *ngFor="let back of back">
+  <ion-item *ngIf="back.category.name === 'Back'&& back.language.short_name === 'en'">
+    <ion-label>{{back.name}}</ion-label>
   </ion-item>
 </ion-list>
 </ion-content>

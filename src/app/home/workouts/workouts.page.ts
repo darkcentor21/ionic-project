@@ -12,7 +12,7 @@ export class WorkoutsPage implements OnInit {
     {
       id:1,
       "name": "Arms",
-      "image":"https://i2.wp.com/ast-ss.com/wp-content/uploads/2016/04/bodybuilder-bicep.jpg?fit=800%2C474&ssl=1",
+      "image":"https://www.muscleandfitness.com/wp-content/uploads/2018/05/1109-arms.jpg?quality=86&strip=all",
       "path":"arms",
     },
     {

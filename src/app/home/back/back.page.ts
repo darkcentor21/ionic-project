@@ -9,12 +9,12 @@ import { HttpClient } from "@angular/common/http";
 export class BackPage implements OnInit {
 
   constructor(private http: HttpClient) { }
-  back: any=[]
+  back: any
   ngOnInit() {
-    this.http.get('https://wger.de/api/v2/')
+    this.http.get('https://wger.de/api/v2/exerciseinfo/?format=json&limit=373&offset=40')
     .subscribe(data=>{
       console.log(data)
-      this.back =data;
+      this.back =data['results'];
     })
   }
 

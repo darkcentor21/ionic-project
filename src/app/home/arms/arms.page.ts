@@ -9,12 +9,12 @@ export class ArmsPage implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  recipe:any
+  arms:any
   ngOnInit() {
-    this.http.get('https://api.edamam.com/api/recipes/v2')
+    this.http.get('https://wger.de/api/v2/exerciseinfo/?format=json&limit=373&offset=40')
     .subscribe(data=>{
       console.log(data)
-      this.recipe =data;
+      this.arms =data['results'];
     })
   }
 
