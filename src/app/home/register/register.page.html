@@ -5,5 +5,10 @@
 </ion-header>
 
 <ion-content>
-
+<ion-input  [(ngModel)]="user.name"type="text" placeholder="Name"></ion-input>
+<ion-input [(ngModel)]="user.email" type="text" placeholder="Email"></ion-input>
+<ion-input [(ngModel)]="user.password" type="password" placeholder="Password"></ion-input>
+<ion-button (click)="register()" expand="block" color="primary" shape="round">
+  SignUp
+</ion-button>
 </ion-content>

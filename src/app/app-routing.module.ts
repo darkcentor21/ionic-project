@@ -8,6 +8,10 @@ const routes: Routes = [
 
   },
   {
+    path:'log',
+    loadChildren:'./home/log/log.LogPageModule'
+  },
+  {
     path:'exercises',
     loadChildren:'./home/workouts/workouts.WorkoutsPageModule '
   },

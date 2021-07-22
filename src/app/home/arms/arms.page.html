@@ -9,7 +9,7 @@
 
 <ion-content>
 <ion-list  class="ion-no-padding" *ngFor=" let arm of arms">
-  <ion-item *ngIf="arm.category.name === 'Arms'&& arm.language.short_name === 'en'">
+  <ion-item button="true"  [routerLink]="['info',arm.id]" *ngIf="arm.category.name === 'Arms'&& arm.language.short_name === 'en'">
     <ion-label >{{arm.name}}</ion-label>
   </ion-item>
 </ion-list>

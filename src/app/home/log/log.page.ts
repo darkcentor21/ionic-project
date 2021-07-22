@@ -12,4 +12,6 @@ export class LogPage implements OnInit {
   ngOnInit() {
   }
 
+
+
 }

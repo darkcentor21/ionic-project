@@ -1,14 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>log</ion-title>
+    <ion-title>Weight Logger</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Bmi</ion-card-title>
+      <ion-card-title>Weight Logger</ion-card-title>
+      <ion-card-content>
+        <ion-input type="number" placeholder="Your Weight">Kg</ion-input>
+        <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+          Submit
+        </ion-button>
+      </ion-card-content>
     </ion-card-header>
   </ion-card>
-<p>content</p>
 </ion-content>

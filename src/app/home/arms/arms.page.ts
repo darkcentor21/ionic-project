@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-arms',
   templateUrl: './arms.page.html',
@@ -10,7 +11,8 @@ export class ArmsPage implements OnInit {
   constructor(private http: HttpClient) { }
 
   arms:any
-  ngOnInit() {
+  ngOnInit(): void {
+
     this.http.get('https://wger.de/api/v2/exerciseinfo/?format=json&limit=373&offset=40')
     .subscribe(data=>{
       console.log(data)

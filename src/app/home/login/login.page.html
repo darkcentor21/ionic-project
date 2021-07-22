@@ -6,4 +6,9 @@
 
 <ion-content>
 
+  <ion-input [(ngModel)]="user.email"  type="text" placeholder="Email"></ion-input>
+    <ion-input [(ngModel)]="user.password"   type="password" placeholder="Password"></ion-input>
+  <ion-button (click)="login()" expand="block" shape="round">Login</ion-button>
+  <ion-button (click)="go()" color="secondary" expand="block" shape="round">register</ion-button>
+
 </ion-content>
