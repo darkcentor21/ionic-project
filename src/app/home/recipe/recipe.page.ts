@@ -29,13 +29,8 @@ export class RecipePage implements OnInit {
     }
   ]
   
-  recipe:any;
   ngOnInit() {
-    this.http.get('https://api.edamam.com/api/recipes/v2')
-    .subscribe(data=>{
-      console.log(data)
-      this.recipe =data;
-    })
+
   }
 
 }

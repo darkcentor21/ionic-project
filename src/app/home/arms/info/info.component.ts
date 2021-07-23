@@ -9,9 +9,11 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./info.component.scss'],
 })
 export class InfoComponent implements OnInit {
-  
   constructor(private route: ActivatedRoute,private http: HttpClient,private ApiServiceService: ApiServiceService) { }
   info:any
+  
+
+
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
     const productionIdfromRoute = Number(routeParams.get('id'));
@@ -19,10 +21,14 @@ export class InfoComponent implements OnInit {
     this.ApiServiceService.getData()
     .subscribe(
       data=>{
-        this.info = data['results'];
+        console.log(data)
+        data[productionIdfromRoute]['name']
+        data[productionIdfromRoute]['equipment.name']
+        data[productionIdfromRoute]['images']
+        
       }
     );
-
+    
 
   }
     
