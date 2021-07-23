@@ -8,9 +8,11 @@
 </ion-header>
 
 <ion-content>
-<ion-list  class="ion-no-padding" *ngFor=" let arm of arms">
-  <ion-item button="true"  [routerLink]="['info',arm.id]" *ngIf="arm.category.name === 'Arms'&& arm.language.short_name === 'en'">
-    <ion-label >{{arm.name}}</ion-label>
-  </ion-item>
-</ion-list>
+
+    <ion-list  class="ion-no-padding" *ngFor=" let arm of arms; index as i" >
+      <ion-item button="true"  [routerLink]="['info',i]" *ngIf="arm.category.name === 'Arms'&& arm.language.short_name === 'en'">
+        <ion-label >{{arm.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+
 </ion-content>

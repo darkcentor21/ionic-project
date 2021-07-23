@@ -21,10 +21,9 @@ export class InfoComponent implements OnInit {
     this.ApiServiceService.getData()
     .subscribe(
       data=>{
-        console.log(data)
-        data[productionIdfromRoute]['name']
-        data[productionIdfromRoute]['equipment.name']
-        data[productionIdfromRoute]['images']
+        console.log(productionIdfromRoute)
+        data['results'][productionIdfromRoute]
+
         
       }
     );
