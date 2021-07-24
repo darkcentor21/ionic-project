@@ -1,13 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-title>SignUp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<ion-input  [(ngModel)]="user.name"type="text" placeholder="Name"></ion-input>
-<ion-input [(ngModel)]="user.email" type="text" placeholder="Email"></ion-input>
-<ion-input [(ngModel)]="user.password" type="password" placeholder="Password"></ion-input>
+<ion-content class="ion-padding">
+  <h1><strong>Health Me</strong></h1>
+<ion-input  class="ion-padding" [(ngModel)]="user.name"type="text" placeholder="Name"></ion-input>
+<ion-input class="ion-padding" [(ngModel)]="user.email" type="text" placeholder="Email"></ion-input>
+<ion-input class="ion-padding" [(ngModel)]="user.password" type="password" placeholder="Password"></ion-input>
 <ion-button (click)="register()" expand="block" color="primary" shape="round">
   SignUp
 </ion-button>

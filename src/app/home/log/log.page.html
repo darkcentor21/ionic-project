@@ -1,19 +1,91 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Weight Logger</ion-title>
+    <ion-title>Fitness Check</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
-    <ion-card-header>
-      <ion-card-title>Weight Logger</ion-card-title>
+    <ion-card-header class="ion-padding">
+      <ion-card-title>BMI Calculator</ion-card-title>
       <ion-card-content>
-        <ion-input type="number" placeholder="Your Weight">Kg</ion-input>
-        <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        <ion-input [(ngModel)]="weight" type="number" placeholder="Your Weight in kilograms">Kg</ion-input>
+        <ion-input [(ngModel)]="height" type="number" placeholder="Your Height in Meters">M</ion-input>
+        <ion-button (click)="calculate()" expand="block"  shape="round">
           Submit
         </ion-button>
+        <ion-text color="secondary" class="ion-padding">
+          <div class="bmi">
+            <h1>Your BMI:</h1>
+            <h1>{{bmi | number: '1.1-2'}}</h1>
+          </div>
+          
+        </ion-text>
       </ion-card-content>
     </ion-card-header>
+  </ion-card>
+  
+  <ion-card class="ion-padding">
+    <ion-card-title><h1>Body Mass Index Guide</h1></ion-card-title>
+    <ion-grid fixed class="Padding">
+      <ion-row>
+        <ion-col size="6">
+          <ion-text color="dark">
+            <h4>Below 18.5</h4>
+          </ion-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-text color="warning">
+            <h4>Underweight</h4>
+          </ion-text> </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-text color="dark">
+            <h4>18.5-24.9</h4>
+          </ion-text>
+           
+          </ion-col>
+
+
+
+
+        <ion-col size="6"> 
+          <ion-text color="success">
+            <h4>Normal</h4>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-text color="dark">
+            <h4>25.0-29.9</h4>
+          </ion-text>
+          
+        </ion-col>
+        <ion-col size="6">
+          <ion-text color="warning">
+            <h4>Overweight</h4>
+          </ion-text> 
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-text color="dark">
+            <h4>Above 30.0</h4>
+          </ion-text>
+        </ion-col>
+        <ion-col size="6">
+           <ion-text color="danger">
+              <h4>Obese</h4>
+            </ion-text> 
+      </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 </ion-content>

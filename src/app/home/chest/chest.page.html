@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>chest</ion-title>
+    <ion-title>Chest Workouts</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="workouts"></ion-back-button>
     </ion-buttons>
@@ -8,8 +8,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list class="ion-no-padding" *ngFor="let chest of chest">
-    <ion-item *ngIf="chest.category.name === 'Chest'&& chest.language.short_name === 'en'">
+  <ion-list class="ion-no-padding" *ngFor="let chest of chest;index as i">
+    <ion-item button="true" [routerLink]="['info',i]" *ngIf="chest.category.name === 'Chest'&& chest.language.short_name === 'en'">
       <ion-label>{{chest.name}}</ion-label>
     </ion-item>
   </ion-list>

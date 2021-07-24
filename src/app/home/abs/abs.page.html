@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>abs</ion-title>
+    <ion-title>Ab Workouts</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list class="ion-no-padding" *ngFor="let abs of abs">
-    <ion-item *ngIf="abs.category.name === 'Abs'&& abs.language.short_name === 'en'">
+  <ion-list class="ion-no-padding" *ngFor="let abs of abs; index as i">
+    <ion-item button="true" [routerLink]="['info',i]" *ngIf="abs.category.name === 'Abs'&& abs.language.short_name === 'en'">
       <ion-label>{{abs.name}}</ion-label>
     </ion-item>
   </ion-list>

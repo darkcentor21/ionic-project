@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DinnerPageRoutingModule } from './dinner-routing.module';
+import { RecipePageRoutingModule } from './recipe-routing.module';
 
-import { DinnerPage } from './dinner.page';
+import { RecipePage } from './recipe.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DinnerPageRoutingModule
+    RecipePageRoutingModule
   ],
-  declarations: [DinnerPage]
+  declarations: [RecipePage]
 })
-export class DinnerPageModule {}
+export class RecipePageModule {}

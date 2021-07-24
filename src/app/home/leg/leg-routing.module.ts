@@ -7,6 +7,9 @@ const routes: Routes = [
   {
     path: '',
     component: LegPage
+  },
+  {
+    path:'info/:id'
   }
 ];
 

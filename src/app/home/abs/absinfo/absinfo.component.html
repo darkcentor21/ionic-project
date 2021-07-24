@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>INFO</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="workouts"></ion-back-button>
+      
+
+      <h1></h1>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <ion-label class="ion-padding"><h1>{{absinfo['name']}}</h1></ion-label>
+    <h1></h1>
+    
+      {{absinfo['description']}}
+      <ion-img src="{{absinfo['image']}}"></ion-img>
+      
+      <ion-label>{{absinfo['equipment.name']}}</ion-label>
+    
+    
+  </div>
+
+</ion-content>

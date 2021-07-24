@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Workout Information</ion-title>
+    <ion-title>INFO</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="workouts"></ion-back-button>
       
@@ -11,13 +11,13 @@
 </ion-header>
 <ion-content class="ion-padding">
   <div class="container">
-    <ion-label class="ion-padding"><h1>{{info['name']}}</h1></ion-label>
+    <ion-label class="ion-padding"><h1>{{back['name']}}</h1></ion-label>
     <h1></h1>
     
-      {{info['description']}}
-      <ion-img [src]="info['image']"></ion-img>
+      {{back['description']}}
+      <ion-img src="{{back['images.image']}}"></ion-img>
 
-      <ion-label>{{info['equipment.name']}}</ion-label>
+      <ion-label>{{back['equipment.name']}}</ion-label>
     
     
   </div>

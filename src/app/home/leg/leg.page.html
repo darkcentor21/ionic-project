@@ -8,8 +8,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list class="ion-no-padding" *ngFor="let leg of leg">
-    <ion-item *ngIf="leg.category.name === 'Legs' && leg.language.short_name === 'en'">
+  <ion-list class="ion-no-padding" *ngFor="let leg of leg;index as i">
+    <ion-item button="true" [routerLink]="['info',i]" *ngIf="leg.category.name === 'Chest'&& leg.language.short_name === 'en'">
       <ion-label>{{leg.name}}</ion-label>
     </ion-item>
   </ion-list>

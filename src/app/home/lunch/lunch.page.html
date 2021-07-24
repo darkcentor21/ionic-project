@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>lunch</ion-title>
+    <ion-title>Lunch</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="recipes"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card class="ion-no-padding" button="true" [routerLink]="lunch.path" *ngFor="let lunch of lunch">
+    <ion-card-header class="ion-no-padding" >
+      <ion-img  [src]="[lunch.image]"></ion-img>
+      <ion-card-title class="ion-padding">{{lunch.name}}</ion-card-title>
+      
+    </ion-card-header>
+  </ion-card>
 </ion-content>
